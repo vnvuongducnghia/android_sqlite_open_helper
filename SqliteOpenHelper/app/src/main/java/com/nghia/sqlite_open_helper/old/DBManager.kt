@@ -1,12 +1,12 @@
-package com.nghia.sqlite_open_helper
+package com.nghia.sqlite_open_helper.old
 
 import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import com.nghia.sqlite_open_helper.DatabaseConstant.DESC
-import com.nghia.sqlite_open_helper.DatabaseConstant.SUBJECT
-import com.nghia.sqlite_open_helper.DatabaseConstant.TABLE_NAME
-import com.nghia.sqlite_open_helper.DatabaseConstant._ID
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DESC
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.SUBJECT
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.TABLE_NAME
+import com.nghia.sqlite_open_helper.old.DatabaseConstant._ID
 
 
 /**

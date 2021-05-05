@@ -3,6 +3,8 @@ package com.nghia.sqlite_open_helper
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.nghia.sqlite_open_helper.old.DBManager
+import com.nghia.sqlite_open_helper.old.DatabaseHelperFile
 
 class MainActivity : AppCompatActivity() {
 

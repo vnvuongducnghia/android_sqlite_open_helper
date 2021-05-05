@@ -1,11 +1,12 @@
-package com.nghia.sqlite_open_helper
+package com.nghia.sqlite_open_helper.old
 
 import android.content.res.AssetManager
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
-import com.nghia.sqlite_open_helper.DatabaseConstant.DB_NAME
-import com.nghia.sqlite_open_helper.DatabaseConstant.DB_VERSION
+import com.nghia.sqlite_open_helper.App
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DB_NAME
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DB_VERSION
 import java.io.*
 
 /**
@@ -62,7 +63,7 @@ object DatabaseHelperFile : SQLiteOpenHelper(
 
     private fun clearData() {
         if (checkDataBase(databaseFile!!.path, DB_NAME)) {
-            App.instance.applicationContext.deleteDatabase(DatabaseHelperAssets.DATABASE_NAME)
+            App.instance.applicationContext.deleteDatabase(DB_NAME)
         }
     }
 

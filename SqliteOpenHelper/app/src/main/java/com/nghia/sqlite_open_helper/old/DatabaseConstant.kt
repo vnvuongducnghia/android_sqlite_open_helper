@@ -1,4 +1,4 @@
-package com.nghia.sqlite_open_helper
+package com.nghia.sqlite_open_helper.old
 
 /**
  * Created by nghia.vuong on 04,May,2021

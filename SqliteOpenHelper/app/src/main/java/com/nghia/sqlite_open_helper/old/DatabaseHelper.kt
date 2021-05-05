@@ -1,13 +1,14 @@
-package com.nghia.sqlite_open_helper
+package com.nghia.sqlite_open_helper.old
 
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.nghia.sqlite_open_helper.DatabaseConstant.DB_NAME
-import com.nghia.sqlite_open_helper.DatabaseConstant.DB_VERSION
-import com.nghia.sqlite_open_helper.DatabaseConstant.DESC
-import com.nghia.sqlite_open_helper.DatabaseConstant.SUBJECT
-import com.nghia.sqlite_open_helper.DatabaseConstant.TABLE_NAME
-import com.nghia.sqlite_open_helper.DatabaseConstant._ID
+import com.nghia.sqlite_open_helper.App
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DB_NAME
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DB_VERSION
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.DESC
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.SUBJECT
+import com.nghia.sqlite_open_helper.old.DatabaseConstant.TABLE_NAME
+import com.nghia.sqlite_open_helper.old.DatabaseConstant._ID
 
 /**
  * Created by nghia.vuong on 04,May,2021
