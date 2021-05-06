@@ -1,24 +1,48 @@
 package com.nghia.sqlite_open_helper.new_room
 
 import android.graphics.Bitmap
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+import androidx.annotation.NonNull
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 /**
  * Created by nghia.vuong on 05,May,2021
  */
+
 // Defining your table
-@Entity(tableName = "users")
+@Entity(tableName = "user")
 class User(
     @PrimaryKey
-    val id: Int,
+    @ColumnInfo(name = "id_user")
+    @NonNull
+    var id: Int,
     @ColumnInfo(name = "first_name")
-    val firstName: String?,
+    var firstName: String?,
     @ColumnInfo(name = "last_name")
-    val lastName: String?,
-    @Ignore val picture: Bitmap? // ignore fields
-)
+    var lastName: String?,
+) {
+    @Ignore
+    var picture: Bitmap? = null
+}
 
-// ignoreColumns
+// Access data using DAO
+@Dao
+interface UserDao {
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertUser(user: User)
+
+    @Delete
+    fun deleteUser(user: User)
+
+    @Query("SELECT * FROM user")
+    fun getAll(): List<User>
+
+    @Query("SELECT * FROM user")
+    fun getAllData(): LiveData<List<User>>
+
+    @Query("SELECT *  FROM user WHERE id_user like :id")
+    fun findUsersByName(id: Int): User
+}
+
+
